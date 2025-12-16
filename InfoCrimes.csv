@@ -1,8 +1,8 @@
 La liste de crimes est triée de cette manière
 
 "Code_departement";
-"Code_region"
-;"annee";
+"Code_region";
+"annee";
 "indicateur";
 "unite_de_compte";
 "nombre";
