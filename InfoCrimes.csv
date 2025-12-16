@@ -1,25 +1,4 @@
-La liste de crimes est triée de cette manière
-
-"Code_departement";
-"Code_region";
-"annee";
-"indicateur";
-"unite_de_compte";
-"nombre";
-"taux_pour_mille";
-"insee_pop";
-"insee_pop_millesime";
-"insee_log";
-"insee_log_millesime"
-
-
-
-
-
-
-
-
-
+"Code_departement";"Code_region";"annee";"indicateur";"unite_de_compte";"nombre";"taux_pour_mille";"insee_pop";"année";"insee_log";"insee_log_millesime"
 "01";"84";"2016";"Homicides";"Victime";"5";"0,0078318";"638425";"2016";"308491";"2016"
 "02";"32";"2016";"Homicides";"Victime";"10";"0,0186520";"536136";"2016";"264180";"2016"
 "03";"84";"2016";"Homicides";"Victime";"4";"0,0117861";"339384";"2016";"206980";"2016"
