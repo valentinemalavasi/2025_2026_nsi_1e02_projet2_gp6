@@ -32,7 +32,7 @@ def tableau_crimes_occurrences(df, annee):
         .reset_index(drop=True)
     )
 
-print(tableau_crimes_occurrences(df, 2019))
+print(tableau_crimes_occurrences(df, 2018))
 
 
 
