@@ -36,6 +36,12 @@ ax.set_ylim(0, 250)
 
 plt.show()
 
+def crimes_par_annee(df, annee):
+    crimes = df[df["annee"] == annee]["indicateur"]
+    return crimes.unique().tolist()
+
+crimes_2018 = crimes_par_annee(df, 2018)
+print(crimes_2018)
 
 # import matplotlib.pyplot as plt
 # import numpy as np
