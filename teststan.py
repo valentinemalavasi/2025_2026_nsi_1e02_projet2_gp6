@@ -61,11 +61,11 @@ def tableau_crimes_occurrences(
 root_window = Tk()
 root_window.title("Logiciel de Statistique parfait")
 root_window.geometry("960x540")
-root_window.minsize(960, 540)
-root_window.maxsize(960, 540)
+#root_window.minsize(960, 540)
+#root_window.maxsize(960, 540)
 root_window.mainloop()
 
-main_title = Label(root_window, text="Bienvenue sur notre Logiciel de Statistiques parfait", fg = "black")
+main_title = Label(root_window, text="Bienvenue sur notre Logiciel de Statistiques parfait", font=("Courrier", 40), fg = "black")
 main_title.pack()
 
 #print(tableau_crimes_occurrences_par_annee(df, 2018))
