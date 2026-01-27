@@ -14,7 +14,7 @@ window.minsize (480, 360)
 label_title = Label(window, text="Bienvenue sur cette application", font=("Courrier",40), fg="black")
 label_title.pack(expand=YES)
 
-label_subtitle = Label(window, text="" font=("Courrier",40), fg="black")
+label_subtitle = Label(window, text="salut", font=("Courrier",40), fg="black")
 label_subtitle.pack(expand=YES)
 
 
