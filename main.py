@@ -8,37 +8,6 @@ df_optimised = df.iloc [:, [0, 1 ,2 ,3, 4, 5, 8]]
 print(df_optimised)
 
 
-
-
-
-def crimes_par_annee(df, annee):
-    crimes = df[df["annee"] == annee]["indicateur"]
-    return crimes.unique().tolist()
-
-crimes_2018 = crimes_par_annee(df, 2018)
-print(crimes_2018)
-
-def tableau_crimes_occurrences(df, annee):
-    filtre = df
-        
-    filtre = filtre[filtre["annee"] == annee]
-
-    return (
-        filtre
-        .groupby("indicateur", as_index=False)["nombre"]
-        .sum()
-        .rename(columns={"nombre": "occurrence_totale"})
-        .sort_values(by="occurrence_totale", ascending=False)
-        .reset_index(drop=True)
-    )
-
-print(tableau_crimes_occurrences(df, 2018))
-
-
-
-
-
-#idée graphique
 departement = df.iloc [:, [0]]
 info_crime = {
     'Nombre de victimes': df.iloc [:, [5]],
@@ -47,7 +16,7 @@ info_crime = {
 }
 
 x = np.arange(len(departement))  # the label locations
-width = 0.25  
+width = 0.25                 
 multiplier = 0
 
 fig, ax = plt.subplots(layout='constrained')
@@ -67,12 +36,12 @@ ax.set_ylim(0, 250)
 
 plt.show()
 
-def crimes_par_annee(df, annee):
-    crimes = df[df["annee"] == annee]["indicateur"]
-    return crimes.unique().tolist()
 
-crimes_2018 = crimes_par_annee(df, 2018)
-print(crimes_2018)
+annees = []
+annees_triees = sorted(annees)
+print(annees_triees)
+[]
+
 
 # import matplotlib.pyplot as plt
 # import numpy as np
