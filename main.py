@@ -8,6 +8,7 @@ df_optimised = df.iloc [:, [0, 1 ,2 ,3, 4, 5, 8]]
 print(df_optimised)
 
 
+<<<<<<< HEAD
 
 
 
@@ -32,13 +33,16 @@ def tableau_crimes_occurrences(df, annee):
         .reset_index(drop=True)
     )
 
-print(tableau_crimes_occurrences(df, 2018))
+print(tableau_crimes_occurrences(df, 2019)) #changer l'année pour les infos crimes des autres années
 
 
 
 
-
+"""=========================================================================================================================================================================================="""
 #idée graphique
+
+=======
+>>>>>>> cf419c95d58f934a979d28f7fe371f464a00e3b2
 departement = df.iloc [:, [0]]
 info_crime = {
     'Nombre de victimes': df.iloc [:, [5]],
@@ -47,7 +51,7 @@ info_crime = {
 }
 
 x = np.arange(len(departement))  # the label locations
-width = 0.25  
+width = 0.25                 
 multiplier = 0
 
 fig, ax = plt.subplots(layout='constrained')
@@ -67,40 +71,38 @@ ax.set_ylim(0, 250)
 
 plt.show()
 
-def crimes_par_annee(df, annee):
-    crimes = df[df["annee"] == annee]["indicateur"]
-    return crimes.unique().tolist()
 
-crimes_2018 = crimes_par_annee(df, 2018)
-print(crimes_2018)
+annees = []
+annees_triees = sorted(annees)
+print(annees_triees)
+[]
 
-# import matplotlib.pyplot as plt
-# import numpy as np
 
-# species = ("Adelie", "Chinstrap", "Gentoo")
-# penguin_means = {
-#     'Bill Depth': (18.35, 18.43, 14.98),
-#     'Bill Length': (38.79, 48.83, 47.50),
-#     'Flipper Length': (189.95, 195.82, 217.19),
-# }
+"""===================================================================================================================================================================================="""
 
-# x = np.arange(len(species))  # the label locations
-# width = 0.25  # the width of the bars
-# multiplier = 0
+"NOUVELLE VERSION CHATGPT"
 
-# fig, ax = plt.subplots(layout='constrained')
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# for attribute, measurement in penguin_means.items():
-#     offset = width * multiplier
-#     rects = ax.bar(x + offset, measurement, width, label=attribute)
-#     ax.bar_label(rects, padding=3)
-#     multiplier += 1
+df = pd.read_csv("InfoCrimes.csv", sep=";")
 
-# # Add some text for labels, title and custom x-axis tick labels, etc.
-# ax.set_ylabel('Length (mm)')
-# ax.set_title('Penguin attributes by species')
-# ax.set_xticks(x + width, species)
-# ax.legend(loc='upper left', ncols=3)
-# ax.set_ylim(0, 250)
+if "count" not in df.columns:
+    df_counts = df.groupby(["annee", "indicateur"]).size().reset_index(name="count")
+else:
+    df_counts = df.groupby(["annee", "indicateur"])["count"].sum().reset_index()
 
-# plt.show()
+
+df_pivot = df_counts.pivot(index="annee", columns="indicateur", values="count").fillna(0)
+
+fig, ax = plt.subplots(figsize=(12, 6))
+
+df_pivot.plot(kind='bar', stacked=True, ax=ax)
+
+ax.set_xlabel("Année")
+ax.set_ylabel("Nombre de crimes")
+ax.set_title("Nombre de crimes par type et par année")
+ax.legend(title="Type de crime")
+
+plt.tight_layout()
+plt.show()
