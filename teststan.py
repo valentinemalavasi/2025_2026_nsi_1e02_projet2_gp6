@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from tkinter import *
 
 df = pd.read_csv("InfoCrimes.csv", sep=";")
 
@@ -57,9 +58,18 @@ def tableau_crimes_occurrences(
         .reset_index(drop=True)
     )
 
+root_window = Tk()
+root_window.title("Logiciel de Statistique parfait")
+root_window.geometry("960x540")
+#root_window.minsize(960, 540)
+#root_window.maxsize(960, 540)
+root_window.mainloop()
 
-print(tableau_crimes_occurrences_par_annee(df, 2018))
-print(tableau_crimes_occurrences(df, 2018, "74", None, "Violences sexuelles"))
+main_title = Label(root_window, text="Bienvenue sur notre Logiciel de Statistiques parfait", font=("Courrier", 40), fg = "black")
+main_title.pack()
+
+#print(tableau_crimes_occurrences_par_annee(df, 2018))
+#print(tableau_crimes_occurrences(df, 2018, "74", None, "Violences sexuelles"))
 
 #Faire un graphique extérieur à l'invite de console
 #Faire en sorte que les fonctions soient plus polyvalentes : une fonction de tri qui peut faire année et département en même temps
