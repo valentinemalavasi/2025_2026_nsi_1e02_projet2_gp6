@@ -8,10 +8,6 @@ df_optimised = df.iloc [:, [0, 1 ,2 ,3, 4, 5, 8]]
 print(df_optimised)
 
 
-<<<<<<< HEAD
-
-
-
 def crimes_par_annee(df, annee):
     crimes = df[df["annee"] == annee]["indicateur"]
     return crimes.unique().tolist()
@@ -41,8 +37,6 @@ print(tableau_crimes_occurrences(df, 2019)) #changer l'année pour les infos cri
 """=========================================================================================================================================================================================="""
 #idée graphique
 
-=======
->>>>>>> cf419c95d58f934a979d28f7fe371f464a00e3b2
 departement = df.iloc [:, [0]]
 info_crime = {
     'Nombre de victimes': df.iloc [:, [5]],
