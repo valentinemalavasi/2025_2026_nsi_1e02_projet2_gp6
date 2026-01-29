@@ -105,4 +105,3 @@ ax.set_title("Nombre de crimes par type et par année")
 ax.legend(title="Type de crime")
 
 plt.tight_layout()
-plt.show()
