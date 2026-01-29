@@ -8,7 +8,6 @@ df_optimised = df.iloc [:, [0, 1 ,2 ,3, 4, 5, 8]]
 print(df_optimised)
 
 
-<<<<<<< HEAD
 
 
 
@@ -33,52 +32,8 @@ def tableau_crimes_occurrences(df, annee):
         .reset_index(drop=True)
     )
 
-print(tableau_crimes_occurrences(df, 2019)) #changer l'année pour les infos crimes des autres années
+print(tableau_crimes_occurrences(df, 2019)) 
 
-
-
-
-"""=========================================================================================================================================================================================="""
-#idée graphique
-
-=======
->>>>>>> cf419c95d58f934a979d28f7fe371f464a00e3b2
-departement = df.iloc [:, [0]]
-info_crime = {
-    'Nombre de victimes': df.iloc [:, [5]],
-    'Année': df.iloc [:, [2]],
-    'Taux pour mille': df.iloc [:, [6]],
-}
-
-x = np.arange(len(departement))  # the label locations
-width = 0.25                 
-multiplier = 0
-
-fig, ax = plt.subplots(layout='constrained')
-
-for attribute, measurement in info_crime.items():
-    offset = width * multiplier
-    rects = ax.bar(x + offset, measurement, width, label=attribute)
-    ax.bar_label(rects, padding=3)
-    multiplier += 1
-
-# associe un texte aux axes
-ax.set_ylabel('Nombre de victimes')
-ax.set_title('Années')
-ax.set_xticks(x + width, departement)
-ax.legend(loc='upper left', ncols=3)
-ax.set_ylim(0, 250)
-
-plt.show()
-
-
-annees = []
-annees_triees = sorted(annees)
-print(annees_triees)
-[]
-
-
-"""===================================================================================================================================================================================="""
 
 "NOUVELLE VERSION CHATGPT"
 
