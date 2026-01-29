@@ -5,18 +5,24 @@ from tkinter import *
 window = Tk()
 
 # personalisation de cette fenètre
-window.title("stan est tres fort en python")
+window.title("stan est tres nul en python")
 window.geometry("1080x720")
 window.minsize (480, 360)
+# crée une boite pour que les elements reste la ou ils doivent etre
+
+frame = Frame(window,bg='#AFAFAF')
 
 # ajouter le texte 
 
-label_title = Label(window, text="Bienvenue sur cette application", font=("Courrier",40), fg="black")
-label_title.pack(expand=YES)
+label_title = Label(frame, text="Bienvenue sur cette application", font=("Courrier",40), fg="black")
+label_title.pack()
 
-label_subtitle = Label(window, text="salut", font=("Courrier",40), fg="black")
-label_subtitle.pack(expand=YES)
+label_subtitle = Label(frame, text="salut", font=("Courrier",25), fg="black")
+label_subtitle.pack()
 
+# ajouter
+
+frame.pack(expand=YES)
 
 # afficher
 
