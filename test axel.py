@@ -5,7 +5,11 @@ from tkinter import *
 window = Tk()
 
 # personalisation de cette fenètre
+<<<<<<< Updated upstream
 window.title("stan est tres nul en python")
+=======
+window.title("app")
+>>>>>>> Stashed changes
 window.geometry("1080x720")
 window.minsize (480, 360)
 # crée une boite pour que les elements reste la ou ils doivent etre
@@ -20,10 +24,16 @@ label_title.pack()
 label_subtitle = Label(frame, text="salut", font=("Courrier",25), fg="black")
 label_subtitle.pack()
 
+<<<<<<< Updated upstream
 # ajouter
 
 frame.pack(expand=YES)
+=======
+# ajouter un bouton 
+>>>>>>> Stashed changes
 
+bouton_graph = Button(window , text="Graphique" ,font=("Courrier",40), fg="black" , bg='grey' )
+bouton_graph.pack
 # afficher
 
 window.mainloop ()
