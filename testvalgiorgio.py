@@ -45,3 +45,14 @@ ax.legend(title="Type de crime")
 
 plt.tight_layout()
 plt.show()
+
+
+"------------------------------------------------------------------------------"
+
+"""
+TO-DO :
+ - graphique type de crime par année (camembert), ou l'utilisateur choisit l'année
+ - graphique évolution d'un type de crime sur toutes les années (courbe), ou l'utilisateur choisit le type de crime
+ - graphique nombre de crime par type et par année dans chaque département (batons empilés), ou l'utilisateur choisit un département
+
+"""
