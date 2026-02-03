@@ -1,0 +1,3 @@
+Nous avons chosi de realiser notre projet 2 en utilisant les données des diiférents crimes dans les differents departements en france.
+Cela permet ainsi de visualiser la part de crime parmi les departements en France. Cela permet ainsi de voir les differents crimes réalisés et leur part dans une region. 
+Ainsi nous pouvons, à partir de ce fichier csv "InfoCrimes", établir des constats et tirer des conclusions des departements les plus dangeureux et les plus sécurisés
