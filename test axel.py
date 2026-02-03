@@ -7,7 +7,11 @@ window = Tk()
 # personalisation de cette fenètre
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 window.title("stan est tres nul en python")
+=======
+window.title("app")
+>>>>>>> Stashed changes
 =======
 window.title("app")
 >>>>>>> Stashed changes
@@ -30,6 +34,7 @@ label_subtitle.pack()
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # ajouter
 
 frame.pack(expand=YES)
@@ -37,6 +42,10 @@ frame.pack(expand=YES)
 # ajouter un bouton 
 >>>>>>> Stashed changes
 
+=======
+# ajouter un bouton 
+
+>>>>>>> Stashed changes
 =======
 # ajouter un bouton 
 
