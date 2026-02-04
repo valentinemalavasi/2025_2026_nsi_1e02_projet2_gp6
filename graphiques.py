@@ -142,7 +142,7 @@ else:
 """
 TO-DO :
  OK- graphique type de crime par année (camembert), ou l'utilisateur choisit l'année 
- OK- graphique évolution d'un type de crime sur toutes les années (courbe), ou l'utilisateur choisit le type de crime
- - graphique nombre de crime par type et par année dans chaque département (batons empilés), ou l'utilisateur choisit un département
+ - graphique évolution d'un type de crime sur toutes les années (courbe), ou l'utilisateur choisit le type de crime
+ OK- graphique nombre de crime par type et par année dans chaque département (batons empilés), ou l'utilisateur choisit un département
 
 """
