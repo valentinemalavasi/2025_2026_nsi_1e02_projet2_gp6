@@ -4,6 +4,7 @@ différents graphiques :
 - Nombre de crimes par type et par année
 - Graphique type de crime par année (camembert), ou l'utilisateur choisit l'année
 - Graphique nombre de crime par type et par année dans un département ou l'utilisateur choisit le département
+- Graphique évolution d'un type de crime en fonction du temps en années (courbe), ou l'utilisateur choisit le type de crime dont il veut voir l'évolution
 
 """
 
@@ -136,13 +137,55 @@ else:
     plt.tight_layout()
     plt.show()
 
+"------------------------------------------------------------------------------------"
+
+"graphique évolution d'un type de crime en fonction du temps en années (courbe), ou l'utilisateur choisit le type de crime dont il veut voir l'évolution"
+
+# Lecture du CSV
+df = pd.read_csv("InfoCrimes.csv", sep=";")
+
+# Conversion des colonnes numériques
+df["annee"] = pd.to_numeric(df["annee"], errors="coerce")
+df["nombre"] = pd.to_numeric(df["nombre"], errors="coerce")
+
+# ===== Choix du type de crime =====
+type_crime = input("Entrez le type de crime à analyser (ex : Homicides) : ")
+
+# Filtrage sur le type de crime
+df_crime = df[df["indicateur"] == type_crime]
+
+# Vérification
+if df_crime.empty:
+    print(f"Aucune donnée disponible pour le type de crime : {type_crime}")
+else:
+    # Agrégation : somme des crimes par année
+    df_evolution = (
+        df_crime.groupby("annee")["nombre"]
+        .sum()
+        .reset_index()
+        .sort_values("annee")
+    )
+
+    # Graphique en courbe
+    plt.figure(figsize=(10, 5))
+    plt.plot(df_evolution["annee"], df_evolution["nombre"], marker="o")
+
+    plt.xlabel("Année")
+    plt.ylabel("Nombre de crimes")
+    plt.title(f"Évolution du nombre de crimes : {type_crime}")
+    plt.grid(True)
+
+    plt.tight_layout()
+    plt.show()
 
 "------------------------------------------------------------------------------------"
 
 """
 TO-DO :
  OK- graphique type de crime par année (camembert), ou l'utilisateur choisit l'année 
- - graphique évolution d'un type de crime sur toutes les années (courbe), ou l'utilisateur choisit le type de crime
+ OK- graphique évolution d'un type de crime sur toutes les années (courbe), ou l'utilisateur choisit le type de crime
  OK- graphique nombre de crime par type et par année dans chaque département (batons empilés), ou l'utilisateur choisit un département
+ -préciser les différents crimes dans le input du graphique ou l'utilisateur choisit le type de crime
+ -pareil pour les dépatartements
 
 """
