@@ -33,8 +33,9 @@ frame.pack(expand=YES)
 
 # ajouter un bouton 
 
-bouton_graph = Button(window , text="Graphique" ,font=("Courrier",40), fg="black" , bg='grey' )
-bouton_graph.pack
+bouton_valider = Button(frame, text="Années", font=("Arial", 11))
+bouton_valider.pack(pady=50)
+
 # afficher
 
 window.mainloop ()
