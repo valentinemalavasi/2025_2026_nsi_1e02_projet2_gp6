@@ -12,10 +12,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-"----------------------------------------------------------------------------------------"
+"--------------------------------------------------------------------------------------------------------------"
 
 "graphique nombre de crimes par type et par année"
-
+"""
 # Lecture du CSV
 df = pd.read_csv("InfoCrimes.csv", sep=";")
 
@@ -49,7 +49,7 @@ plt.tight_layout()
 plt.show()
 
 
-"------------------------------------------------------------------------------------"
+"-------------------------------------------------------------------------------------------------------------"
 
 "graphique type de crime par année (camembert), ou l'utilisateur choisit l'année"
 
@@ -136,8 +136,8 @@ else:
 
     plt.tight_layout()
     plt.show()
-
-"------------------------------------------------------------------------------------"
+"""
+"--------------------------------------------------------------------------------------------------------------"
 
 "graphique évolution d'un type de crime en fonction du temps en années (courbe), ou l'utilisateur choisit le type de crime dont il veut voir l'évolution"
 
