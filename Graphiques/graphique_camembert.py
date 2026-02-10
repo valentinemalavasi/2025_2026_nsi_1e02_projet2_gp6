@@ -11,7 +11,7 @@ df = pd.read_csv("InfoCrimes.csv", sep=";")
 df["annee"] = pd.to_numeric(df["annee"], errors="coerce")
 df["nombre"] = pd.to_numeric(df["nombre"], errors="coerce")
 
-# ===== Année choisie par l'utilisateur =====
+#  Année choisie par l'utilisateur 
 annee_choisie =  2016 #int(input("Entrez l'année à consulter entre 2016 et 2024 : "))
 
 # Filtrage sur l'année
