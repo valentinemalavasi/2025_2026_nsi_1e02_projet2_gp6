@@ -34,6 +34,13 @@ frame.pack(expand=YES)
 bouton_valider = Button(frame, text="Années", font=("Arial", 11))
 bouton_valider.pack(pady=50)
 
+bouton_valider = Button(frame, text="Type de crime", font=("Arial", 11))
+bouton_valider.pack(pady=50)
+
+bouton_valider = Button(frame, text="Departement", font=("Arial", 11))
+bouton_valider.pack(pady=50)
+
+
 # afficher
 
 window.mainloop ()
