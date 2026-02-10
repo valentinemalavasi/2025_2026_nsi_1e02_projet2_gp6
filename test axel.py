@@ -30,9 +30,11 @@ file_menu.add_command(label="Nouveau", command=generate_password)
 file_menu.add_command(label="Quitter", command=window.quit)
 menu_bar.add_cascade(label="Fichier", menu=file_menu)
 
+#configuartion de la fenetre pour ajouter cette menu bar
+window.config (menu=menu_bar)
 
 
-
+#demander a chat pour enregistrer les recherches si on veut dans bar menu
 
 
 # ajouter
