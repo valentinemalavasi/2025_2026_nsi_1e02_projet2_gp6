@@ -22,8 +22,6 @@ frame = Frame(window,bg='#AFAFAF',bd=1, relief= SUNKEN)
 label_title = Label(window, text="Bienvenue ", font=("Courrier",40), fg="black", bg='white')
 label_title.pack()
 
-label_subtitle = Label(frame , text="année ", font=("Courrier",25), fg="black", bg='white')
-label_subtitle.pack()
 
 
 # ajouter
