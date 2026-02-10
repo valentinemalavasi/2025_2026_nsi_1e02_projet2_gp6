@@ -22,6 +22,17 @@ frame = Frame(window,bg='#AFAFAF',bd=1, relief= SUNKEN)
 label_title = Label(window, text="Bienvenue! selectionner vos paramètres ", font=("Courrier",40), fg="black", bg='white')
 label_title.pack()
 
+#création d'une barre menu
+menu_bar = Menu(window) 
+#creer un premier menu
+fil_menu = Menu(menu_bar, tearoff=0)
+file_menu.add_command(label="Nouveau", command=generate_password)
+file_menu.add_command(label="Quitter", command=window.quit)
+menu_bar.add_cascade(label="Fichier", menu=file_menu)
+
+
+
+
 
 
 # ajouter
