@@ -19,7 +19,7 @@ frame = Frame(window,bg='#AFAFAF',bd=1, relief= SUNKEN)
 
 # ajouter le texte 
 
-label_title = Label(window, text="Bienvenue ", font=("Courrier",40), fg="black", bg='white')
+label_title = Label(window, text="Bienvenue! selectionner vos paramètres ", font=("Courrier",40), fg="black", bg='white')
 label_title.pack()
 
 
@@ -31,13 +31,13 @@ frame.pack(expand=YES)
 
 # ajouter un bouton 
 
-bouton_valider = Button(frame, text="Années", font=("Arial", 11))
+bouton_valider = Button(frame, text="Années du crime", font=("Arial", 11))
 bouton_valider.pack(pady=50)
 
 bouton_valider = Button(frame, text="Type de crime", font=("Arial", 11))
 bouton_valider.pack(pady=50)
 
-bouton_valider = Button(frame, text="Departement", font=("Arial", 11))
+bouton_valider = Button(frame, text="Département du crime", font=("Arial", 11))
 bouton_valider.pack(pady=50)
 
 
