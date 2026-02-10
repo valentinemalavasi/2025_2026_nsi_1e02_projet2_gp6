@@ -25,8 +25,8 @@ label_title.pack()
 #création d'une barre menu
 menu_bar = Menu(window) 
 #creer un premier menu
-fil_menu = Menu(menu_bar, tearoff=0)
-file_menu.add_command(label="Nouveau", command=generate_password)
+file_menu = Menu(menu_bar, tearoff=0)
+file_menu.add_command(label="Nouveau")
 file_menu.add_command(label="Quitter", command=window.quit)
 menu_bar.add_cascade(label="Fichier", menu=file_menu)
 
@@ -34,8 +34,17 @@ menu_bar.add_cascade(label="Fichier", menu=file_menu)
 window.config (menu=menu_bar)
 
 
-#demander a chat pour enregistrer les recherches si on veut dans bar menu
-
+#faire un bouton save pour la recherche
+def save_recherche():
+    with open("recherches.txt", "a", encoding="utf-8") as f:
+        f.write("f"Année: {annee_crime}, Type: {type_crime}, Département: {departement}\n")
+btn_save = Button(
+    frame,
+    text="Save",
+    font=("Arial", 11),
+    command=save_recherche
+)
+btn_save.pack(pady=30)
 
 # ajouter
 
