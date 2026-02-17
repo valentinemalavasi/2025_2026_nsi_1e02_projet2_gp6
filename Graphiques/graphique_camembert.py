@@ -29,7 +29,7 @@ else:
     )
 
     # Graphique en camembert
-    plt.figure(figsize=(8, 8))
+    plt.figure(figsize=(12,12))
     plt.pie(
         df_grouped["nombre"],
         labels=df_grouped["indicateur"],
