@@ -37,7 +37,9 @@ window.config (menu=menu_bar)
 #faire un bouton save pour la recherche
 def save_recherche():
     with open("recherches.txt", "a", encoding="utf-8") as f:
-        f.write("f"Année: {annee_crime}, Type: {type_crime}, Département: {departement}\n")
+        f.write(f"Année: {annee_crime}, Type: {type_crime}, Département: {departement}\n")
+
+        
 btn_save = Button(
     frame,
     text="Save",
@@ -45,6 +47,10 @@ btn_save = Button(
     command=save_recherche
 )
 btn_save.pack(pady=30)
+
+annee_crime = "2020"
+type_crime = "Vol"
+departement = "75"
 
 # ajouter
 
