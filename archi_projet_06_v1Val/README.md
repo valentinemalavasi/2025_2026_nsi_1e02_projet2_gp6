@@ -12,4 +12,5 @@ Commande pour installer pandas :
 """
 Interet du choix à mettre dans le README ??
 Pycache ??
+ps test 1 (mieux que test ps) ==> affiche la meme chose pour barres et courbes pour tous et ne fait pas de camembert pour les autres types
 """
