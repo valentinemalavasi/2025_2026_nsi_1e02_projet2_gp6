@@ -8,3 +8,8 @@ Axel VIALA
 
 Commande pour installer pandas :
 & 'C:\Program Files\Python313\python.exe' -m pip install pandas+
+
+"""
+Interet du choix à mettre dans le README ??
+Pycache ??
+"""
