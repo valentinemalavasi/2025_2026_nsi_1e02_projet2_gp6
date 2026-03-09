@@ -35,7 +35,11 @@ class Controller:
                 messagebox.showerror("Erreur", "Impossible de créer une courbe : au moins 2 années nécessaires.")
                 return
 
-            view_graph.graphique_evolution(ax, data, type_graph)
+            try:
+                view_graph.graphique_evolution(ax, data, type_graph)
+            except Exception as e:
+                messagebox.showerror("Erreur", f"Impossible de créer le graphique en courbe : {str(e)}")
+                return
 
         else:
             data = model.data_repartition(df)
@@ -44,7 +48,11 @@ class Controller:
                 messagebox.showerror("Erreur", "Impossible de créer un camembert : au moins 2 catégories nécessaires.")
                 return
 
-            view_graph.graphique_repartition(ax, data, type_graph)
+            try:
+                view_graph.graphique_repartition(ax, data, type_graph)
+            except Exception as e:
+                messagebox.showerror("Erreur", f"Impossible de créer le graphique : {str(e)}")
+                return
 
         canvas = FigureCanvasTkAgg(fig, master=cadre_graphique)
         canvas.draw()
