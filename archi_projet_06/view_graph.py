@@ -1,18 +1,6 @@
 import matplotlib.pyplot as plt
 
 def graphique_evolution(ax, data, type_graph):
-    """
-    Crée un graphique d'évolution (courbe ou bâton).
-    
-    Args:
-        ax: Axes matplotlib
-        data: DataFrame contenant les colonnes 'annee' et 'nombre'
-        type_graph: Type de graphique demandé ("Courbes" ou "Barres")
-    
-    Raises:
-        ValueError: Si le type de graphique n'est pas valide
-        Exception: Si les données ne peuvent pas être converties
-    """
     if type_graph not in ["Courbes", "Barres"]:
         raise ValueError(f"Type de graphique invalide : '{type_graph}'. Doit être 'Courbes' ou 'Barres'.")
     
@@ -49,18 +37,6 @@ def graphique_evolution(ax, data, type_graph):
 
 
 def graphique_repartition(ax, data, type_graph):
-    """
-    Crée un graphique de répartition (camembert ou bâton).
-    
-    Args:
-        ax: Axes matplotlib
-        data: DataFrame contenant les colonnes 'indicateur' et 'nombre'
-        type_graph: Type de graphique demandé ("Camembert" ou "Barres")
-    
-    Raises:
-        ValueError: Si le type de graphique n'est pas valide
-        Exception: Si les données ne peuvent pas être converties
-    """
     if type_graph not in ["Camembert", "Barres"]:
         raise ValueError(f"Type de graphique invalide : '{type_graph}'. Doit être 'Camembert' ou 'Barres'.")
     
